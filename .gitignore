@@ -1,0 +1,11 @@
+# Ignore all VS Code settings
+.vscode/
+
+# Ignore Windows executable and object files
+*.exe
+*.obj
+
+# Optional: Ignore temporary build or debug files
+*.log
+*.tmp
+*.out
