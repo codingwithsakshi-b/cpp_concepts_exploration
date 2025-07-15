@@ -67,15 +67,18 @@ public:
     }
     void Ishungry()
     {
-        //only for asking is hungry or not
-        if(ishungry == 1)
-        {
-            cout << fg::red << "Yes " << name <<" is Hungry! 🐥"<< endl;
-        }
-        else
-        {
-            cout << fg::red << "No " << name <<" is not Hungry! 🐥"<< endl;
-        }
+        //Optimised
+        cout<<fg::cyan << (ishungry ? "YES Pet is Hungry" : "NO Pet is not hungry") << endl;
+        
+        // //only for asking is hungry or not
+        // if(ishungry == 1)
+        // {
+        //     cout << fg::red << "Yes " << name <<" is Hungry! 🐥"<< endl;
+        // }
+        // else
+        // {
+        //     cout << fg::red << "No " << name <<" is not Hungry! 🐥"<< endl;
+        // }
     }
 
 };
