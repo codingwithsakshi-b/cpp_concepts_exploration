@@ -1,0 +1,9 @@
+Paracetamol,M101,12-08-2026,100,1.5,Cipla
+Amoxicillin,M102,25-09-2025,80,2.8,Sun Pharma
+Azithromycin,M104,05-07-2025,70,5.5,Alkem
+Metformin,M105,30-03-2026,200,3,Lupin
+Pantoprazole,M106,14-12-2024,150,2,Intas
+Dolo 150,M107,02-02-2027,300,1.8,Micro Labs
+Combiflam,M108,08-01-2025,120,2.4,Sanofl
+Invermectin,m109,16-10-2025,60,4.2,Torrent
+Atorvastatin,M110,22-11-2025,90,3.6,Zydus Cadila
