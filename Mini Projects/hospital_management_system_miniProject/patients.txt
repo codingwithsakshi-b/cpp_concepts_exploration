@@ -1,0 +1,4 @@
+Sakshi Sharma,20,Female,Headache,1000,1878000512
+Govind ji,22,Male,headache,1001,1878000512
+Ayaan ,25,Male,cancer,1002,1878000512
+Kumar Hari,30,Male,diabetes,1003,1878000512
