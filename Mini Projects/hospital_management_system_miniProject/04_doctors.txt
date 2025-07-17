@@ -1,0 +1,10 @@
+1000|Dr. Aisha Mehta|General Physician|9876543210|Morning|1|17-07-2025 01:30 AM
+1001|Dr. Rohan Sharma|Pediatrician|9876543211|Evening|1|17-07-2025 01:34 AM
+1002|Dr. Priya Nair|General Surgeon|9876543212|Morning|0|17-07-2025 01:35 AM
+1003|Dr. Arjun Verma|Orthopedic Surgeon|9876543213|Evening|1|17-07-2025 01:38 AM
+1004|Dr. Simran Kaur|Gynecologist|9876543214|Morning|1|17-07-2025 01:38 AM
+1005|Dr. Imran Siddiqui|Dermatologist|9876543215|Not Assigned|1|17-07-2025 01:39 AM
+1006|Dr. Neha Dessai|ENT Specialist|9876543216|Evening|0|17-07-2025 01:39 AM
+1007|Dr. Ankit Patel|Radiologist|9876543217|Morning|1|17-07-2025 01:40 AM
+1008|Dr. Kavya Reddy|Pathologist|9876543218|Not Assigned|1|17-07-2025 01:40 AM
+1009|Dr. Sameer Joshi|Anesthesiologist|9876543219|Evening|1|17-07-2025 01:41 AM

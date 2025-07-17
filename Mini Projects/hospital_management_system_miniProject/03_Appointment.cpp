@@ -138,12 +138,12 @@ void showMenu()
 }
 
 void saveToFile() {
-    ofstream file("appointments.csv");
+    ofstream file("03_appointments.csv");
     for (const auto& appt : appointmentList) {
         file << appt.toCSV() << "\n";
     }
     file.close();
-    cout << fg::green << "✅ Appointments saved to 'appointments.csv'\n";
+    cout << fg::green << "✅ Appointments saved to '03_appointments.csv'\n";
 }
 
 bool isPastDate(const string& date) {
@@ -161,7 +161,7 @@ bool isPastDate(const string& date) {
 }
 
 void autoTrash() {
-    ofstream trashFile("trashed_appointments.csv", ios::app); // store old appointments
+    ofstream trashFile("03_trashed_appointments.csv", ios::app); // store old appointments
     vector<Appointment> updatedList;
 
     for (const auto& appt : appointmentList) {
@@ -188,7 +188,7 @@ void addAppointment()
     a.input();
     appointmentList.push_back(a);
     
-    ofstream file("appointments.csv", ios::app);
+    ofstream file("03_appointments.csv", ios::app);
     if(file.is_open())
     {
         file << a.toCSV() << "\n";
@@ -315,7 +315,7 @@ void searchAppointments()
 }
 
 void loadFromFile() {
-    ifstream file("appointments.csv");
+    ifstream file("03_appointments.csv");
     if (!file.is_open()) return;
 
     string line;
