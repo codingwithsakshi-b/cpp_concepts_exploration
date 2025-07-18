@@ -1,0 +1,35 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_005
+📅 Date          : 20/07/2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Naman Dubey
+Age              : 30
+Gender           : Male
+Patient ID       : 1011
+Contact Number   : 9876543221
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Mehta
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Fracture
+Diagnosis        : Hairline fracture in right wrist
+Prescribed Meds  : Calcium supplements, Painkillers (Ibuprofen 400mg), Anti-flammatory gel, General Bed
+Follow-up Date   : 24/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+-Apply cast for 3 weeks
+- Avoid any wrist movement
+- Physiotherapy to begin post healing phase.
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

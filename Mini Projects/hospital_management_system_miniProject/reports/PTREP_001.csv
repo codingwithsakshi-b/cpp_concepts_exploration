@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_001,Sakshi Sharma,Female,20,1878000512,1000,Dr. Mehta,18-07-2025,Headache,Normal Health,Multivitamin tablets,25/07/2025,Maintain hydration and 8 hours of sleep daily

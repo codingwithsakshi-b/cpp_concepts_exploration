@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_007
+📅 Date          : 19-07-2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Arnav Deshmukh
+Age              : 35
+Gender           : Male
+Patient ID       : PAT2025_022
+Contact Number   : 2147483647
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Aisha Mehta
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : High Fever & dehydration
+Diagnosis        : Fever: 102 degree, 97 degree, no rashes viral infection detected
+Prescribed Meds  : Paracetamol - 1 every 6hrs, ORS, Multivitamin
+Follow-up Date   : 22/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Bed rest 2-3 days, increase fluid intake, revisit if fever persists beyod 3 days
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

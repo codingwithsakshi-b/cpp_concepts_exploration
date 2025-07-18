@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_004
+📅 Date          : 20/07/2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Kabir Joshi
+Age              : 26
+Gender           : Male
+Patient ID       : 1007
+Contact Number   : 9876543217
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Bhargava
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Toothache
+Diagnosis        : Good Oral Hygiene
+Prescribed Meds  : Antiseptic Mouthwash
+Follow-up Date   : 26/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Brush Twice Daily, no major concers
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

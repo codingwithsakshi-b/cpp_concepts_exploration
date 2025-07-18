@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_003
+📅 Date          : 20/07/2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Aditi Verma
+Age              : 19
+Gender           : Female
+Patient ID       : 1002
+Contact Number   : 9876543212
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Kapoor
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Fever
+Diagnosis        : Viral Infection
+Prescribed Meds  : Paracetamol 500mg, cough syrup
+Follow-up Date   : 22/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Take rest, avoid cold drings and fast foods
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

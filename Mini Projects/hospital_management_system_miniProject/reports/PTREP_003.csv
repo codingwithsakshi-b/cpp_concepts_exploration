@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_003,Aditi Verma,Female,19,9876543212,1002,Dr. Kapoor,20/07/2025,Fever,Viral Infection,Paracetamol 500mg, cough syrup,22/07/2025,Take rest, avoid cold drings and fast foods

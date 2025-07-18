@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_002
+📅 Date          : 20/07/2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Aryan Singh
+Age              : 22
+Gender           : Male
+Patient ID       : 1001
+Contact Number   : 9876543211
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Verma
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Cold
+Diagnosis        : Viral Infection
+Prescribed Meds  : Paracetamol 500mg, Cough Syrup
+Follow-up Date   : 22/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Take rest, Avoid cold drinks and friend food
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

@@ -1,14 +1,14 @@
 RoomNumber,BedCount,BedsOccupied,RoomType,Oxygen,AC,PatientNames
 R101,3,2,General,1,0,Rohit|Sejal Verma
 R102,2,0,ICU,1,1,-
-R103,1,1,Private,0,1,Aryan
+R103,1,1,Private,0,1,Sabhya Suri
 R104,4,4,General,1,0,Sheelamani|Rahul Verma|Anshul Kumar|Nandini Sharma
 R105,2,2,ICU,1,1,Shanti|Kruti
-R106,3,2,Deluxe,1,1,Rohan|Priya
-R107,2,1,General,0,0,Aryan Singh
+R106,1,0,Deluxe,1,1,-
+R107,2,2,General,0,0,Aryan Singh|Saanvi Rathore
 R108,3,3,ICU,1,1,Deepak|Sana|Amit
 R109,1,1,Private,0,1,Pooja Sharma
-R110,4,1,General,0,0,Tina
+R110,4,1,General,0,0,Tina   
 R111,2,2,ICU,1,1,Ravi|Simran
 R112,2,0,Deluxe,1,1,-
 R113,1,1,Private,1,1,Megha Sharma
@@ -16,7 +16,7 @@ R114,3,1,General,1,0,Sid
 R115,2,0,ICU,1,0,-
 R116,2,2,Private,1,1,Maya|Ankit
 R117,4,4,Deluxe,1,1,Nisha|Vivek|Ritu|Mohit
-R118,1,0,Private,1,0,-
+R118,1,1,Private,1,1,Naman Dubey
 R119,3,3,General,0,0,Palak|Dinesh|Alok
 R120,2,1,ICU,1,1,Ruchi
 R121,3,3,Deluxe,1,1,Sujla|Sufla|Sejal Verma
@@ -27,5 +27,9 @@ R125,3,1,General,1,0,Ishika
 R126,2,2,Deluxe,1,1,Tarun|Divya
 R127,2,0,General,0,0,-
 R128,3,2,ICU,1,1,Neeraj|Rhea
-R129,1,0,Private,1,1,-
+R129,1,1,Private,1,1,Saanvi Rathore
 R130,4,4,General,1,0,Anil|Komal|Jeet|Rani
+A101,1,1,Private,1,1,Saumya Ali
+A102,1,0,Private,1,1,-
+A103,1,0,Private,1,1,-
+D101,2,0,Deluxe,1,1,-

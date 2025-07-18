@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_006
+📅 Date          : 19-07-2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Saanvi Rathore
+Age              : 28
+Gender           : Female
+Patient ID       : PAT2025_021
+Contact Number   : 2147483647
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Arjun Mehra
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Fracture
+Diagnosis        : Patient suffered a hairline fracture in right ankel
+Prescribed Meds  : Calcium + D3 Tablets - 1 day, Pain reliever - SOS, cold compress 
+Follow-up Date   : 24/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Orthopedicc follow up in 10 days , avoid weight on affected leg
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

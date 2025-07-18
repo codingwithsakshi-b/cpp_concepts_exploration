@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_005,Naman Dubey,Male,30,9876543221,1011,Dr. Mehta,20/07/2025,Fracture,Hairline fracture in right wrist,Calcium supplements, Painkillers (Ibuprofen 400mg), Anti-flammatory gel,24/07/2025,-Apply cast for 3 weeks

@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_008
+📅 Date          : 19/07/2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Sabhya Suri
+Age              : 12
+Gender           : Female
+Patient ID       : PAT2025_023
+Contact Number   : 2147483647
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Ritu Bansal
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Depression
+Diagnosis        : Signs of low mood, social withdrawl, fatigue, no history of trauma detected, moderate childhood depression
+Prescribed Meds  : Cognitive Behavioral Therapy (CBT) recomended, Omega-3 capsules, Parrent Couselling suggested
+Follow-up Date   : 18/08/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Weekly session for 6 weeks, daily journey and positive reinforcement
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

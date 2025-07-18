@@ -1,274 +1,229 @@
-#define _WIN32_WINNT 0x0600 //for running the file rang.hpp for colored output
+#define _WIN32_WINNT 0x0600
 #include <iostream>
-#include "rang.hpp"
-#include <vector>
 #include <fstream>
+#include <vector>
 #include <sstream>
-using namespace rang;
+#include <iomanip>
+#include "rang.hpp"
 using namespace std;
+using namespace rang;
 
-class Patient
-{
-private:
+class Patient {
+public:
+    string patientID;
     string name;
     int age;
     string gender;
     string disease;
-    int patientID;
-    int roomNo;
+    long long contactNumber;
 
-public:
+    Patient() : patientID(""), name(""), age(0), gender(""), disease(""), contactNumber(0) {}
 
-    //Default Constructor
-    Patient()
-    {
-        name = " ";
-        age = 0;
-        gender = " ";
-        disease = " ";
-        patientID = 0;
-        roomNo = 0;
-    }
+    Patient(string id, string name, int age, string gender, string disease, long long contactNumber)
+        : patientID(id), name(name), age(age), gender(gender), disease(disease), contactNumber(contactNumber) {}
 
-    Patient(string name, int age, string gender, string disease, int patientID, int rommNo)
-    {
-        this -> name = name;
-        this -> age = age;
-        this -> gender = gender;
-        this -> disease = disease;
-        this -> patientID = patientID;
-        this -> roomNo = roomNo;
-    }
-
-    //Search utility and return patient ID
-    int getID()
-    {
-        return patientID;
-    }
-
-    //Update any Details
-    void updateDetails(string disease, int roomNo, int age)
-    {
-       this -> disease = disease;
-       this -> roomNo = roomNo;
-       this -> age = age; 
-       cout << fg::green << "Patient Info Updated Successfully! ✅ \n";
-    }
-
-    //For Displaying details
-    void displayDetails()
-    {
+    void displayDetails() const {
         cout << fg::cyan << "\n-------------------------------\n";
-        cout << fg::green << "Name         : "<< name << endl;
-        cout << fg::green << "Age          : "<< age << endl;
-        cout << fg::green << "Gender       : "<< gender << endl;
-        cout << fg::green << "Disease      : "<< disease << endl;
-        cout << fg::green << "Patient Id   : "<< patientID << endl;
-        cout << fg::green << "Room No.     : "<< roomNo << endl;
-        cout << fg::cyan << "\n-------------------------------\n";
+        cout << fg::green << "Patient ID     : " << patientID << "\n";
+        cout << fg::green << "Name           : " << name << "\n";
+        cout << fg::green << "Age            : " << age << "\n";
+        cout << fg::green << "Gender         : " << gender << "\n";
+        cout << fg::green << "Disease        : " << disease << "\n";
+        cout << fg::green << "Contact Number : " << contactNumber << "\n";
+        cout << fg::cyan << "-------------------------------\n";
     }
 
-    void saveToFile(ofstream &file) const
-    {
-        file << name << "," << age << "," << gender << "," << disease << "," << patientID << "," << roomNo << "\n";
+    void saveToFile(ofstream& file) const {
+        file << patientID << "," << name << "," << age << "," << gender << "," << disease << "," << contactNumber << "\n";
     }
-
 };
 
-void pause()
-{
-    cout << fg::yellow << "\nPress Enter to continue...";
-    cin.ignore();
-    cin.get();
+string generateUniquePatientID(const vector<Patient>& patients) {
+    int maxID = 0;
+    for (const auto& p : patients) {
+        if (p.patientID.find("PAT2025_") == 0) {
+            int num = stoi(p.patientID.substr(9));
+            if (num > maxID) maxID = num;
+        }
+    }
+    stringstream ss;
+    ss << "PAT2025_" << setw(3) << setfill('0') << (maxID + 1);
+    return ss.str();
 }
 
-void loadPatients(vector<Patient> &records)
-{
-    ifstream file("patients.txt");
-    if(!file) return;
+void loadPatients(vector<Patient>& patients) {
+    ifstream file("01_patients.txt");
+    if (!file) return;
 
-    string name, gender, disease;
-    int age, id, room;
     string line;
-
-    while (getline(file, line))
-    {
+    while (getline(file, line)) {
+        if (line.empty()) continue;
         stringstream ss(line);
+        string id, name, gender, disease;
+        int age;
+        long long contact;
+
+        getline(ss, id, ',');
         getline(ss, name, ',');
         ss >> age;
         ss.ignore();
         getline(ss, gender, ',');
         getline(ss, disease, ',');
-        ss >> id;
-        ss.ignore();
-        ss >> room;
+        ss >> contact;
 
-        records.push_back(Patient(name, age, gender, disease, id, room));
+        patients.push_back(Patient(id, name, age, gender, disease, contact));
     }
-
     file.close();
 }
 
-void rewriteAllToFile(const vector<Patient> &records)
-{
-    ofstream file("patients.txt");
-    for(const Patient &p: records)
-    {
+void saveAllPatients(const vector<Patient>& patients) {
+    ofstream file("01_patients.txt");
+    for (const auto& p : patients) {
         p.saveToFile(file);
     }
     file.close();
 }
 
-int main()
-{
-    system("chcp 65001");//for getting emojis in terminal output
+void pause() {
+    cout << fg::yellow << "\nPress Enter to continue...";
+    cin.ignore();
+    cin.get();
+    system("cls");
+}
 
-    vector <Patient> records;
+int main() {
+    system("chcp 65001 > nul");
+    system("cls");
 
-    loadPatients(records);
-    cout<<"\n📂 Patient data loaded from file.\n";
+    vector<Patient> patients;
+    loadPatients(patients);
+    cout << fg::green << "📂 Patients loaded from file.\n";
 
     int choice;
 
-    do 
-    {
+    do {
         cout << fg::magenta << "\n=========== 🏥 Hospital Patient Record System ===========\n";
         cout << fg::cyan << "1. Add New Patient\n";
-        cout << fg::cyan << "2. Display All Patient\n";
+        cout << fg::cyan << "2. View All Patients\n";
         cout << fg::cyan << "3. Search Patient by ID\n";
         cout << fg::cyan << "4. Update Patient Info\n";
         cout << fg::cyan << "5. Exit\n";
-
-        cout<< fg::yellow << "\nChoose an Option: ";
+        cout << fg::yellow << "Enter Your Choice: ";
         cin >> choice;
 
-        switch(choice)
-        {
-            case 1:
-            {
-                string name, gender, disease;
-                int age, id, room;
+        cin.ignore();  // flush buffer
 
-                cout << fg::blue << "Enter Patient Name: ";
-                cin.ignore();
+        switch (choice) {
+            case 1: {
+                string name, gender, disease;
+                int age;
+                long long contact;
+
+                cout << fg::blue << "Enter Patient Name       : ";
                 getline(cin, name);
 
-                cout << fg::blue << "Enter Patient Age: ";
+                cout << fg::blue << "Enter Age                : ";
                 cin >> age;
 
-                cout << fg::blue << "Enter Gender: ";
+                cout << fg::blue << "Enter Gender             : ";
                 cin >> gender;
 
-                cout << fg::blue << "Enter Disease: ";
-                cin >> disease;
+                cout << fg::blue << "Enter Disease            : ";
+                cin.ignore();
+                getline(cin, disease);
 
-                cout << fg::blue << "Enter patient ID: ";
-                cin >> id;
+                cout << fg::blue << "Enter Contact Number     : ";
+                cin >> contact;
 
-                cout << fg::blue << "Enter Room Number: ";
-                cin >> room;
+                string id = generateUniquePatientID(patients);
+                Patient newP(id, name, age, gender, disease, contact);
+                patients.push_back(newP);
 
-                Patient newPatient(name, age, gender, disease, id, room);
-                records.push_back(newPatient);
-
-                //saving to file
-                ofstream outFile("patients.txt", ios::app);
-                newPatient.saveToFile(outFile);
+                ofstream outFile("01_patients.txt", ios::app);
+                newP.saveToFile(outFile);
                 outFile.close();
 
-                cout << fg::green << "✅ Patient added successfully!\n";
+                cout << fg::green << "✅ Patient added successfully! ID: " << id << "\n";
                 pause();
                 break;
             }
-            case 2:
-            {
-                if(records.empty())
-                {
+
+            case 2: {
+                if (patients.empty()) {
                     cout << fg::red << "⚠️ No patient records found.\n";
-                }
-                else
-                {
-                    cout << fg::magenta << "\n📃 List of Patients:\n";
-                    for(Patient p: records)
-                    {
+                } else {
+                    for (const auto& p : patients) {
                         p.displayDetails();
                     }
                 }
                 pause();
                 break;
             }
-            case 3:
-            {
-                int searchID;
+
+            case 3: {
+                string searchID;
                 bool found = false;
                 cout << fg::yellow << "Enter Patient ID to search: ";
-                cin >> searchID;
+                getline(cin, searchID);
 
-                for(Patient p: records)
-                {
-                    if(p.getID() == searchID)
-                    {
-                        cout << fg::green << "🔍 Patient found:\n";
+                for (const auto& p : patients) {
+                    if (p.patientID == searchID) {
+                        cout << fg::green << "🔍 Patient Found:\n";
                         p.displayDetails();
                         found = true;
                         break;
                     }
                 }
-                if(!found)
-                {
-                    cout << fg::red << "❌ No patient with ID "<< searchID << " found.\n";
 
+                if (!found) {
+                    cout << fg::red << "❌ No patient with ID " << searchID << " found.\n";
                 }
                 pause();
                 break;
             }
 
-            case 4:
-            {
-                int updateID;
-                cout << fg::yellow << "Enter Patient ID to Update: ";
-                cin >> updateID;
+            case 4: {
+                string updateID;
                 bool updated = false;
+                cout << fg::yellow << "Enter Patient ID to update: ";
+                getline(cin, updateID);
 
-                for (Patient &p: records)
-                {
-                    if(p.getID() == updateID)
-                    {
-                        string newDisease;
-                        int newRoom, newAge;
+                for (auto& p : patients) {
+                    if (p.patientID == updateID) {
+                        cout << fg::blue << "Enter new Disease        : ";
+                        getline(cin, p.disease);
 
-                        cout << fg::blue << "Enter new Disease: ";
-                        cin >> newDisease;
+                        cout << fg::blue << "Enter new Contact Number : ";
+                        cin >> p.contactNumber;
 
-                        cout << fg::blue << "Enter new Room No.: ";
-                        cin >> newRoom;
+                        cout << fg::blue << "Enter new Age            : ";
+                        cin >> p.age;
 
-                        cout << fg::blue << "Enter new Age: ";
-                        cin >> newAge;
-
-                        p.updateDetails(newDisease, newRoom, newAge);
                         updated = true;
+                        cout << fg::green << "✅ Patient info updated successfully!\n";
                         break;
                     }
                 }
-                rewriteAllToFile(records);
 
-                if(!updated)
-                    cout << fg::red << "❌ Patient not found for update.\n";
+                if (!updated) {
+                    cout << fg::red << "❌ No patient with that ID found.\n";
+                }
 
+                saveAllPatients(patients);
                 pause();
                 break;
             }
 
             case 5:
-                cout << fg::cyan << "👋 Exiting the program. Stay healthy!\n";
+                cout << fg::green << "👋 Exiting. Stay healthy!\n";
                 break;
 
             default:
                 cout << fg::red << "⚠️ Invalid choice. Try again.\n";
                 pause();
         }
-    }while (choice != 5);
+
+    } while (choice != 5);
 
     return 0;
 }

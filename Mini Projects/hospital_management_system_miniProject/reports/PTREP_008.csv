@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_008,Sabhya Suri,Female,12,2147483647,PAT2025_023,Dr. Ritu Bansal,19/07/2025,Depression,Signs of low mood, social withdrawl, fatigue, no history of trauma detected, moderate childhood depression,Cognitive Behavioral Therapy (CBT) recomended, Omega-3 capsules, Parrent Couselling suggested,18/08/2025,Weekly session for 6 weeks, daily journey and positive reinforcement

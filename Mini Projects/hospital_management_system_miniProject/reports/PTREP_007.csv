@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_007,Arnav Deshmukh,Male,35,2147483647,PAT2025_022,Dr. Aisha Mehta,19-07-2025,High Fever & dehydration,Fever: 102 degree, 97 degree, no rashes viral infection detected,Paracetamol - 1 every 6hrs, ORS, Multivitamin,22/07/2025,Bed rest 2-3 days, increase fluid intake, revisit if fever persists beyod 3 days

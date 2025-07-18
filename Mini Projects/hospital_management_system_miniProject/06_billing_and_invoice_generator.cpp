@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <sstream>
 #include "rang.hpp"
+#include <direct.h>
 using namespace rang;
 using namespace std;
 
@@ -125,6 +126,36 @@ void saveBillsToFile(const vector<Bill>& bills, const string& filename)
 
     file.close();
     cout << fg::green << "✅ Bills saved to " << filename << " successfully!\n";
+}
+
+void saveInvoiceAsTXT(const Bill& bill) {
+    _mkdir("invoices"); // Create folder if not exists (Windows)
+
+    string filename = "invoices/" + bill.patientID + ".txt";
+    ofstream file(filename);
+    if (!file) {
+        cout << fg::red << "❌ Failed to save invoice for " << bill.patientID << endl;
+        return;
+    }
+
+    file << "=================================================\n";
+    file << "              🏥 HOSPITAL INVOICE\n";
+    file << "=================================================\n";
+    file << "🧾 Patient ID     : " << bill.patientID << "\n";
+    file << "👤 Patient Name   : " << bill.patientName << "\n";
+    file << "📅 Billing Date   : " << bill.billingDate << "\n";
+    file << "-------------------------------------------------\n";
+    file << "🩺 Consultation Fee : ₹" << fixed << setprecision(2) << bill.consultationFee << "\n";
+    file << "💊 Medicine Cost    : ₹" << bill.medicineCost << "\n";
+    file << "🛏️  Room Charges     : ₹" << bill.roomCharges << "\n";
+    file << "-------------------------------------------------\n";
+    file << "💰 TOTAL AMOUNT     : ₹" << bill.totalAmount << "\n";
+    file << "=================================================\n";
+    file << "         Thank you for trusting our care! 💖\n";
+    file << "=================================================\n";
+
+    file.close();
+    cout << fg::green << "📝 Invoice saved as " << filename << endl;
 }
 
 // Function to load bills from a file
@@ -251,6 +282,7 @@ int main() {
             b.createBill(bills.size());
             bills.push_back(b);
             saveBillsToFile(bills, filename);
+            saveInvoiceAsTXT(b); // <--- ✅ NEW LINE
             pause();
         }
         else if (choice == 2) {

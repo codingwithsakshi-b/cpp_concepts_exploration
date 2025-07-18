@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_004,Kabir Joshi,Male,26,9876543217,1007,Dr. Bhargava,20/07/2025,Toothache,Good Oral Hygiene,Antiseptic Mouthwash,26/07/2025,Brush Twice Daily, no major concers

@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_009
+📅 Date          : 19-07-2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Saumya Ali
+Age              : 18
+Gender           : Male
+Patient ID       : PAT2025_024
+Contact Number   : 9846773874
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Manav Thakur
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : HIV
+Diagnosis        : confirmed HIV positive (ELISA TEST), CD4 count pending, weight loss and fatigue observed
+Prescribed Meds  : ART initiation advised, Multivitamin support, Immune Booster tablets
+Follow-up Date   : 18/08/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Regular Counselling Sessions, Practice hygine and immune care
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

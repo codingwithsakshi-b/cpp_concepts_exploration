@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_002,Aryan Singh,Male,22,9876543211,1001,Dr. Verma,20/07/2025,Cold,Viral Infection,Paracetamol 500mg, Cough Syrup,22/07/2025,Take rest, Avoid cold drinks and friend food

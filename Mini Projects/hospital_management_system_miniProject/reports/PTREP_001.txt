@@ -1,0 +1,33 @@
+=========================================================
+                   🏥 MEDICAL REPORT
+=========================================================
+
+🆔 Report ID     : PTREP_001
+📅 Date          : 18-07-2025
+
+👤 Patient Details
+---------------------------------------------------------
+Name             : Sakshi Sharma
+Age              : 20
+Gender           : Female
+Patient ID       : 1000
+Contact Number   : 1878000512
+
+🩺 Doctor Assigned
+---------------------------------------------------------
+Name             : Dr. Mehta
+
+📝 Medical Information
+---------------------------------------------------------
+Reported Problem : Headache
+Diagnosis        : Normal Health
+Prescribed Meds  : Multivitamin tablets
+Follow-up Date   : 25/07/2025
+
+🗒️ Notes
+---------------------------------------------------------
+Maintain hydration and 8 hours of sleep daily
+
+=========================================================
+          Thank you for visiting! Stay healthy 💖
+=========================================================

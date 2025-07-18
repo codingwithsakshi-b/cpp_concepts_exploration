@@ -1,0 +1,2 @@
+ReportID,PatientName,Gender,Age,Contact,PatientID,Doctor,Date,Problem,Diagnosis,Medicines,FollowupDate,Notes
+PTREP_006,Saanvi Rathore,Female,28,2147483647,PAT2025_021,Dr. Arjun Mehra,19-07-2025,Fracture,Patient suffered a hairline fracture in right ankel,Calcium + D3 Tablets - 1 day, Pain reliever - SOS, cold compress ,24/07/2025,Orthopedicc follow up in 10 days , avoid weight on affected leg
