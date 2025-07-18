@@ -1,0 +1,4 @@
+PatientID,PatientName,BillingDate,ConsultationFee,MedicineCost,RoomCharges,TotalAmount
+BILL2025_001,Sakshi Sharma,17-07-2025,500,1200,2500,4200
+BILL2025_002,Aryan Mehra,17-07-2025,300,700,1800,2800
+BILL2025_003,Megha Sharma,18/07/2025,500,2000,1500,4000
