@@ -79,9 +79,14 @@ public:
     }
 
     string toCSV() const {
+        auto escape = [](const string& field) -> string {
+            return "\"" + field + "\"";
+        };
+
         stringstream ss;
-        ss << reportID << "," << patientName << "," << gender << "," << age << "," << contact << "," << patientFileID << ","
-           << doctorName << "," << date << "," << problem << "," << diagnosis << "," << medicines << "," << followupDate << "," << notes;
+        ss << reportID << "," << escape(patientName) << "," << gender << "," << age << "," << contact << "," << patientFileID << ","
+        << escape(doctorName) << "," << date << "," << escape(problem) << "," << escape(diagnosis) << "," << escape(medicines) << "," 
+        << followupDate << "," << escape(notes);
         return ss.str();
     }
 };
